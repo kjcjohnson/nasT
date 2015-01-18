@@ -1,7 +1,7 @@
 URL="/"
-TEMPLATE_IN="../views/index.st"
-TEMPLATE_IN="../views/index.html"
-RENDER="../render.sh"
+TEMPLATE_IN="views/index.st"
+TEMPLATE_OUT="views/index.html"
+RENDER="./render.sh"
 METHOD=$1
 data_k=()
 data_v=()
