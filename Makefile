@@ -15,3 +15,6 @@ db:
 	@echo "Enter the name of the table you would like to make: "
 	@./nTemplates/make_db.sh
 
+handler:
+	@echo "Enter the name of the endpoint _without_ the slash in front "
+	@./nTemplates/make_handler.sh

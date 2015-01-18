@@ -1,6 +1,6 @@
-URL="/"
-TEMPLATE_IN="../views/index.st"
-TEMPLATE_IN="../views/index.html"
+URL="/contact"
+TEMPLATE_IN="views/contact.st"
+TEMPLATE_IN="views/contact.st"
 RENDER="../render.sh"
 METHOD=$1
 data_k=()
