@@ -3,10 +3,6 @@ DB=./db/table.txt
 KEY=$2
 VAL=$3 
 
-echo "$1"
-echo "$KEY"
-echo "$VAL"
-
 case "$1" in
     create)
 	grep -q ^$KEY$'\x1f' $DB
