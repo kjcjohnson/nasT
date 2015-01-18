@@ -40,9 +40,6 @@ done
 ## Automagic variables:
 ##   $URL is the page url
 ##   $METHOD is the request method
-##   $TEMPLATE_IN is the template before it is rendered
-##   $TEMPLATE_OUT is the rendered html
-##   $RENDER is the rendering tool
 ##   $data_k is an array of the get/post keys
 ##   $data_v is an array of the get/post values
 
@@ -59,3 +56,10 @@ done
 #   cat ../headers/HTTP200OK 
 ##
 ####################################
+
+##Example
+##  
+
+cat headers/HTTP200OK
+$RENDER $TEMPLATE_IN $TEMPLATE_OUT title nasT type MVC
+cat $TEMPLATE_OUT

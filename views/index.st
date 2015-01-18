@@ -1,13 +1,11 @@
-<%header %>
-<h1>About the Site</h1>
-<div class="pure-g">
-    <div class="pure-u-1-4">
-      <img src="/images/typewriter.jpg" style="display:block; max-width:90%; margin: auto">
-    </div>
-    <div class="pure-u-3-4">
-      <p>PapaDoble is an API for literary cocktails, notably those favored by Ernest Hemingway. The API is both RESTful and stateless, takes JSON encoded requests, and returns JSON responses. This site serves as a front end for the API and a place for the documentation to live.</p>
-      <p>I had the idea because I have always been a fan of Hemingway's work, and I have wanted for a while to try to implement an API. The vast majority of this code was written at the Fall 2014 MHacks, and I'm pretty happy with how is has turned out so far. The names of many of these cocktails, and a few of the recipes, come from Phillip Greene's <i>To Have and Have Another</i>, which I highly recommend. All recipe's are cited with a source if you're wondering where I got them.</p>
-      <p>If you have any questions, feel free to shoot me an email at <a href="mailto:<%name%>@gmail.com"><%name%>@gmail.com</a>. Happy Mixing!</p>
-    </div>
-</div>
-<%footer%>
+<html>
+  <head>
+    <title><%title%></title>
+  </head>
+  <body>
+    <h1>Welcome to nasT, a portable <%type%> webserver built only with UNIX utilities</h1>
+    <p>To get started, review the documentation.</p>
+    <hr/>
+    <h3>This was built by Aidan Coyle and Keith Johnson in about 24 hours. Good luck.</h3>
+  </body>
+</html>
