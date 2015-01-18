@@ -65,18 +65,20 @@ then
     exit
 fi
 
+args=`echo $string | tr '=' ' ' `
+
 ## What we do here is case on the URL to find the appropriate handler
 
 
 if [[ "$baseurl" = "/home" ]] 
 then 
-    ./handlers/index.sh $method $string > /tmp/nasTout
+    ./handlers/index.sh $method $args > /tmp/nasTout
 elif [[ "$baseurl" = "/" ]]
 then
-    ./handlers/index.sh $method $string > /tmp/nasTout
+    ./handlers/index.sh $method $args > /tmp/nasTout
 elif [[ "$baseurl" = "/contact" ]]
 then
-    ./handlers/contact.sh $method $string > /tmp/nasTout
+    ./handlers/contact.sh $method $args > /tmp/nasTout
 else
     cat headers/HTTP404NOTFOUND > /tmp/nasTout
 fi

@@ -6,7 +6,6 @@ METHOD=$1
 data_k=()
 data_v=()
 
-echo "$@"
 
 i=1;
 for arg in "$@" 
@@ -64,8 +63,8 @@ done
 
 if [ "$METHOD" = "POST" ]
 then
-    echo "${data_v[*]}"
-    echo "${data_k[*]}"
+    #echo "${data_v[*]}"
+    #echo "${data_k[*]}"
     #echo './db/table.sh create  "{data_v[1]}" "${data_v[2]}"'
     ./db/table.sh create "${data_v[0]}" "${data_v[1]}"
     if [ $? -eq 0 ]
