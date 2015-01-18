@@ -1,6 +1,6 @@
 URL="/"
 TEMPLATE_IN="../views/index.st"
-TEMPLATE_IN="../views/index.html"
+TEMPLATE_OUT="../views/index.html"
 RENDER="../render.sh"
 METHOD=$1
 data_k=()
