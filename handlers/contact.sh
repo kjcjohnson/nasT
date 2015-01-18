@@ -1,7 +1,7 @@
 URL="/contact"
 TEMPLATE_IN="views/contact.st"
 TEMPLATE_IN="views/contact.st"
-RENDER="../render.sh"
+RENDER="./render.sh"
 METHOD=$1
 data_k=()
 data_v=()
@@ -59,3 +59,26 @@ done
 #   cat ../headers/HTTP200OK 
 ##
 ####################################
+
+if [ $METHOD -eq $POST ]
+then
+    ./db/table.sh create "${data_v[1]}" "${data_v[2]}"
+    if [ $? -eq 0 ]
+    then
+	msg="Successful :D"
+    else
+	./db/table.sh update "${data_v[1]}" "${data_v[2]}"	
+	if [ $? -eq 0 ]
+	then
+	    msg="Successful :D, and good to see you again"
+	else
+	    msg="Not Successful :("
+	fi
+    fi
+    cat ./headers/HTTP200OK
+    $RENDER ./views/thanks.st ./views/thanks.html msg "$msg"
+    exit 0
+else
+    cat ./headers/HTTP200OK
+    cat ./views/contact.html
+fi
