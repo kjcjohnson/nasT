@@ -56,6 +56,14 @@ done
 
 ## What we do here is case on the URL to find the appropriate handler
 
+echo $fullurl | grep -q "^/static/"
+if [ $? -eq 0 ]
+then
+    filename=`echo $fullurl | grep -o '^[^?]*'`
+    cat headers/HTTP200OK ".$filename" > out_pipe
+    exit
+fi
+
 ./nTemplates/handler_temp.sh $method $keys $values > /tmp/nasTout
 
 cat /tmp/nasTout > out_pipe
