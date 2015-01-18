@@ -80,7 +80,7 @@ elif [[ "$baseurl" = "/contact" ]]
 then
     ./handlers/contact.sh $method $args > /tmp/nasTout
 else
-    cat headers/HTTP404NOTFOUND > /tmp/nasTout
+    cat headers/HTTP404NOTFOUND static/notfound.html > /tmp/nasTout
 fi
 
 cat /tmp/nasTout > out_pipe
