@@ -59,11 +59,15 @@ done
 
 cat headers/HTTP200OK
 
-echo "<html><head><title>nasT Test Page</title></head>"
-echo "<body>"
-echo "<h1>Welcome to nasT, a portable MVC webserver built only with UNIX utilities</h1>"
+echo "<html><head><title>nasT Test Page</title>"
+echo "<link rel='stylesheet' type='text/css' href='/static/layout.css'>"
+echo "<link rel='stylesheet' type='text/css' href='/static/combo.css'>"
+echo "</head>"
+echo "<body><div id='content' class='inner'>"
+echo "<h2 class='unnumbered'>"
+echo "Welcome to nasT, a portable MVC webserver built only with UNIX utilities</h1>"
 echo "<p>To get started, review the documentation.</p>"
 echo "<hr/>"
 echo "<h3>This was built by Aidan Coyle and Keith Johnson in about 24 hours. Good luck.</h3>"
-echo "</body></html>"
+echo "</div></body></html>"
 
