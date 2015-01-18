@@ -7,6 +7,9 @@ OUTPIPE = out_pipe
 
 .PHONY: db handler
 
+setup: $(OUTPIPE)
+	mkfifo $(OUTPIPE)
+
 listen:
 	@touch $(OUTPIPE)
 	@while true; do cat $(OUTPIPE) | nc -l $(PORT) | ./routes.sh; done

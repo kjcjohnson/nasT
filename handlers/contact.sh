@@ -69,14 +69,14 @@ then
     ./db/table.sh create "${data_v[0]}" "${data_v[1]}"
     if [ $? -eq 0 ]
     then
-	msg='Successful :D'
+	msg='Successfully :D'
     else
 	./db/table.sh update "${data_v[0]}" "${data_v[1]}"	
 	if [ $? -eq 0 ]
 	then
-	    msg='Successful :D, and good to see you again'
+	    msg='Successfully :D, and good to see you again'
 	else
-	    msg='Not Successful :('
+	    msg='Unsuccessfully :('
 	fi
     fi
     cat ./headers/HTTP200OK

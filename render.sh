@@ -15,9 +15,9 @@ do
     fi
     if [ $(($i % 2)) -eq 0 ]
     then
-	data_v+=($arg);
+	data_v+=("$arg");
     else
-	data_k+=($arg);
+	data_k+=("$arg");
     fi
     i=$((i+1))
 done

@@ -6,7 +6,7 @@
   <body>
     <div id='content' class='inner'>
       <h2 class='unnumbered'>Thanks!</h2>
-      <p>Glad to hear from you! Your message was:</p>
+      <p>Glad to hear from you! Your message was sent:</p>
       <p><%msg%></p>
       <hr/>
       <p>If you submit multiple times under the same name we'll only save the most recent one</p>
