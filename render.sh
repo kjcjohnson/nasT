@@ -26,6 +26,6 @@ done
 
 for i in `seq 0 $((${#data_k[*]} - 1))`; 
 do
-    echo "[[$i]]> Looking for: ${data_k[$i]} to replace with: ${data_v[$i]}"
+    #echo "[[$i]]> Looking for: ${data_k[$i]} to replace with: ${data_v[$i]}"
     sed -i "s/<%${data_k[$i]}%>/${data_v[$i]}/g" $OUTFILE
 done 

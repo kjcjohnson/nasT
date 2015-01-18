@@ -2,7 +2,6 @@
   <head>
     <title><%title%></title>
     <link rel='stylesheet' type='text/css' href='/static/layout.css'>
-    <link rel='stylesheet' type='text/css' href='/static/combo.css'>
   </head>
   <body>
     <div id='content' class='inner'>

@@ -60,8 +60,9 @@ done
 ##
 ####################################
 
-if [ $METHOD -eq $POST ]
+if [ "$METHOD" = "POST" ]
 then
+    #echo './db/table.sh create  "{data_v[1]}" "${data_v[2]}"'
     ./db/table.sh create "${data_v[1]}" "${data_v[2]}"
     if [ $? -eq 0 ]
     then
@@ -77,6 +78,7 @@ then
     fi
     cat ./headers/HTTP200OK
     $RENDER ./views/thanks.st ./views/thanks.html msg "$msg"
+    cat ./views/thanks.html
     exit 0
 else
     cat ./headers/HTTP200OK

@@ -8,6 +8,16 @@
       <h2 class='unnumbered'>Contact Us!</h2>
       <p>Think this is great? Think we're idiots for doing it? Let us know!</p>
       <hr/>
+      <form action='/contact' method='POST'>
+	<label>Name:
+	  <input type="text" name="name"/>
+	</label>
+	<br/>
+	<textarea rows="4" cols="50" name="comment">
+	</textarea>
+	<br/>
+	<input type="submit"/>
+      </form>
       <p>If you submit multiple times under the same name we'll only save the most recent one</p>
   </body>
 </html>

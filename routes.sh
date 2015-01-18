@@ -50,21 +50,36 @@ do
     i+=1
 done
 
+baseurl=`echo $fullurl | grep -o '^[^?]*'`
+echo "Method: $method URL: $baseurl"
 #################################
 ## DO NOT EDIT ABOVE THIS LINE ##
 #################################
 
-## What we do here is case on the URL to find the appropriate handler
-
+## This serves files statically that are in the static/ directory
+##   at a /static/filename.file URL
 echo $fullurl | grep -q "^/static/"
 if [ $? -eq 0 ]
 then
-    filename=`echo $fullurl | grep -o '^[^?]*'`
-    cat headers/HTTP200OK ".$filename" > out_pipe
+    cat headers/HTTP200OK ".$baseurl" > out_pipe
     exit
 fi
 
-./nTemplates/handler_temp.sh $method $keys $values > /tmp/nasTout
+## What we do here is case on the URL to find the appropriate handler
+
+
+if [[ "$baseurl" = "/home" ]] 
+then 
+    ./handlers/index.sh $method $string > /tmp/nasTout
+elif [[ "$baseurl" = "/" ]]
+then
+    ./handlers/index.sh $method $string > /tmp/nasTout
+elif [[ "$baseurl" = "/contact" ]]
+then
+    ./handlers/contact.sh $method $string > /tmp/nasTout
+else
+    cat headers/HTTP404NOTFOUND > /tmp/nasTout
+fi
 
 cat /tmp/nasTout > out_pipe
 
