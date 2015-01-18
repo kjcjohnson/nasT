@@ -20,10 +20,10 @@ do
     i=$((i+1))
 done
 
-echo "URL: $URL"
-echo "METHOD: $METHOD"
-echo "KEYS: ${data_k[*]}"
-echo "VALUES: ${data_v[*]}"
+#echo "URL: $URL"
+#echo "METHOD: $METHOD"
+#echo "KEYS: ${data_k[*]}"
+#echo "VALUES: ${data_v[*]}"
 
 ###### DON'T EDIT ABOVE HERE ########
 # unless you know what you're doing # 
@@ -57,7 +57,7 @@ echo "VALUES: ${data_v[*]}"
 ##Example
 ##  
 
-cat ../headers/HTTP200OK
+cat headers/HTTP200OK
 
 echo "<html><head><title>nasT Test Page</title></head>"
 echo "<body>"
